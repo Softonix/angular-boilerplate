@@ -1,0 +1,11 @@
+@import "./../../../assets/styles/variables";
+@import "./../../../assets/styles/mixins";
+
+.login-page-wrap {
+  height: 100%;
+}
+
+.card-container {
+  min-width: pxToRem(300px);
+  border-radius: $border-radius-global;
+}

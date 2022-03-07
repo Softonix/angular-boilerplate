@@ -1,0 +1,103 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixins';
+
+
+
+
+
+// local variables
+$arrow-size: pxToRem(24px);
+$logo-size: pxToRem(32px);
+$footer-height: pxToRem(24px);
+
+:host {
+  z-index: 4;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.so-footer {
+  z-index: 4;
+  background-color: $color-gray;
+  border-radius: 0;
+  color: $color-white;
+
+  mat-expansion-panel-header {
+    height: $footer-height !important;
+    cursor: default;
+    box-sizing: border-box;
+    color: $color-white;
+
+    & .mat-content {
+      justify-content: space-between;
+    }
+
+    :first-child {
+      margin-right: auto;
+    }
+
+    :last-child {
+      flex-grow: 0;
+      margin: 0;
+    }
+  }
+
+  //company logo
+  h1 {
+    font-family: "Source Sans Pro", sans-serif;
+    color: $color-white;
+    font-weight: 100;
+  }
+
+  .so-logo {
+    img {
+      width: $logo-size;
+      height: $logo-size;
+    }
+  }
+}
+
+// arrow button
+mat-panel-description {
+  button {
+    top: pxToRem(-1px);
+    right: pxToRem(10px);
+    width: $arrow-size;
+    height: $arrow-size;
+    color: $color-white;
+
+    .caret {
+      width: $arrow-size;
+    }
+  }
+}
+
+.footer-container {
+  ul {
+    list-style-type: none;
+  }
+}
+
+// Override material button styling
+button {
+  border-radius: 0;
+
+  font: inherit;
+  line-height: inherit;
+
+  overflow: visible;
+  text-transform: none;
+}
+
+
+
+// this approach is deprecated, use global styles writing instead
+// you can write .wrapper { 'current styles' }, or ::host-context('expected-host-class') .current-style { }
+:host ::ng-deep {
+  .mat-expansion-panel-body {
+    box-sizing: border-box;
+    padding: pxToRem(16px) pxToRem(24px) !important;
+    height: pxToRem(72px);
+  }
+}

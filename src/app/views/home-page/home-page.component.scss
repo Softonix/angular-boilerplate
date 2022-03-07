@@ -1,0 +1,14 @@
+@import "./../../../assets/styles/mixins";
+@import "./../../../assets/styles/variables";
+
+section {
+  display: table;
+  border: 1px solid $color-gray;
+  border-radius: $border-radius-global;
+}
+
+.time-wrap {
+  border: pxToRem(1px) solid black;
+  border-radius: $border-radius-global;
+  max-width: fit-content;
+}

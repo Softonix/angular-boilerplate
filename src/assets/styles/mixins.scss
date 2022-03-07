@@ -1,0 +1,7 @@
+@import "variables";
+
+// convert px to rem
+@function  pxToRem($size) {
+  $remSize: calc($size / $global-font-size * 1rem);
+  @return $remSize;
+}

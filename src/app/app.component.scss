@@ -1,0 +1,24 @@
+@import '../assets/styles/variables';
+
+// Local vars
+$body-bg: #f4f7fa;
+
+.main-body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $body-bg;
+
+  &.dark {
+    background-color: $color-dark-bg;
+    color: white;
+
+    so-footer {
+      border-top: 1px solid brown;
+    }
+  }
+
+  .content-container {
+    height: 100%;
+  }
+}

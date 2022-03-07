@@ -1,0 +1,160 @@
+{
+  "root": true,
+  "overrides": [
+    {
+      "files": [
+        "./src/**/*.ts"
+      ],
+      "parser": "@typescript-eslint/parser",
+      "extends": [
+        "google",
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/ng-cli-compat",
+        "plugin:@angular-eslint/ng-cli-compat--formatting-add-on",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        "no-shadow": "off",
+        "@typescript-eslint/no-shadow": [
+          "error"
+        ],
+        "no-unused-vars": "error",
+        "valid-jsdoc": "off",
+        "require-jsdoc": "off",
+        "no-underscore-dangle": "off",
+        "new-cap": "off",
+        "no-invalid-this": "off",
+        "quotes": "off",
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": "default",
+            "format": [
+              "camelCase",
+              "snake_case",
+              "PascalCase"
+            ],
+            "leadingUnderscore": "allow",
+            "trailingUnderscore": "allow"
+          },
+          {
+            "selector": "variable",
+            "format": [
+              "camelCase",
+              "UPPER_CASE"
+            ],
+            "leadingUnderscore": "allow",
+            "trailingUnderscore": "allow"
+          },
+          {
+            "selector": "typeLike",
+            "format": [
+              "PascalCase"
+            ]
+          },
+          {
+            "selector": [
+              "enum",
+              "enumMember",
+              "interface"
+            ],
+            "format": [
+              "StrictPascalCase"
+            ]
+          }
+        ],
+        "prefer-arrow/prefer-arrow-functions": [
+          "warn",
+          {
+            "disallowPrototype": true,
+            "singleReturnOnly": true,
+            "classPropertiesAllowed": false
+          }
+        ],
+        "@typescript-eslint/quotes": [
+          "error",
+          "single",
+          {
+            "avoidEscape": true
+          }
+        ],
+        "comma-dangle": [
+          "error",
+          "never"
+        ],
+        "indent": [
+          "error",
+          2
+        ],
+        "max-len": [
+          "error",
+          {
+            "code": 200
+          }
+        ],
+        "jsdoc/no-types": "off",
+        "padded-blocks": [
+          "error",
+          {
+            "classes": "always"
+          }
+        ],
+        "object-curly-spacing": [
+          "error",
+          "always"
+        ],
+        "@angular-eslint/prefer-on-push-component-change-detection": "error",
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "so",
+            "style": "kebab-case"
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "so",
+            "style": "camelCase"
+          }
+        ],
+        "linebreak-style": 0
+      }
+    },
+    {
+      "files": [
+        "./src/**/*.spec.ts"
+      ],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": [
+          "./tsconfig.spec.json"
+        ],
+        "createDefaultProgram": false
+      },
+      "extends": [
+        "plugin:jasmine/recommended"
+      ],
+      "plugins": [
+        "jasmine"
+      ],
+      "rules": {
+        "jasmine/prefer-toHaveBeenCalledWith": "off"
+      },
+      "env": {
+        "jasmine": true
+      }
+    },
+    {
+      "files": [
+        "./src/**/*.component.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ]
+    }
+  ]
+}
+

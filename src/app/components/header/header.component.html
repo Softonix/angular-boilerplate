@@ -1,0 +1,16 @@
+<header class="so-header p-1 d-flex space-between" [class.dark-mode]="nightModeActive | async">
+  <div class="logo-wrap" [routerLink]="rootRoutes.home">
+    <img src="./assets/img/logo.png" alt="logo"/>
+  </div>
+  <div>
+    <button mat-raised-button [routerLink]="rootRoutes.login" color="primary">Login</button>
+    <mat-slide-toggle
+      class="example-toggle"
+      color="warn"
+      [checked]="(nightModeActive | async)"
+      (change)="switchNightMOde($event)">
+      Night mode
+    </mat-slide-toggle>
+  </div>
+</header>
+<mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
