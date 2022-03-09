@@ -1,14 +1,14 @@
-<header class="so-header p-4 flex justify-between" [class.dark-mode]="nightModeActive | async">
-  <div class="logo-wrap" [routerLink]="rootRoutes.home">
+<header class="so-header p-4 flex justify-between w-full" [class.dark-mode]="nightModeActive | async">
+  <div class="logo-wrap cursor-pointer" [routerLink]="rootRoutes.home">
     <img src="./assets/img/logo.png" alt="logo"/>
   </div>
   <div>
     <button mat-raised-button [routerLink]="rootRoutes.login" color="primary">Login</button>
     <mat-slide-toggle
-      class="example-toggle"
+      class="ml-4"
       color="warn"
       [checked]="(nightModeActive | async)"
-      (change)="switchNightMOde($event)">
+      (change)="switchNightMode($event)">
       Night mode
     </mat-slide-toggle>
   </div>

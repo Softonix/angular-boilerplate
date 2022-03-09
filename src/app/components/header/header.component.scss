@@ -2,19 +2,14 @@
 @import "../../../assets/styles/mixins";
 
 .so-header {
-  width: 100%;
   background-color: $color-so-orange;
 
   &.dark-mode {
     background-color: $color-dark-header;
   }
 
-  .logo-wrap, .logo-wrap img {
+  .logo-wrap img {
     max-width: pxToRem(150px);
-    cursor: pointer;
   }
 
-  .example-toggle {
-    margin-left: pxToRem(20px);
-  }
 }

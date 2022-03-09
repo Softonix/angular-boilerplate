@@ -14,7 +14,4 @@ export class AppComponent {
   @Select(AppState.nightMode)
   public nightModeActive!: Observable<boolean>;
 
-  title = 'my-app';
-  t = 'as';
-
 }

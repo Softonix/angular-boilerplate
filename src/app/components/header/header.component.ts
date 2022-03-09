@@ -26,7 +26,7 @@ export class HeaderComponent {
   }
 
   // dispatch() method return cold stream and no need to subscribe it
-  switchNightMOde(event: MatSlideToggleChange): void {
+  switchNightMode(event: MatSlideToggleChange): void {
     this.store.dispatch(new AppSwitchNightMode(event.checked));
   }
 

@@ -1,6 +1,6 @@
-<div class="main-body" [class.dark]="nightModeActive | async">
+<div class="main-body h-full flex flex-col" [class.dark]="nightModeActive | async">
   <so-header></so-header>
-  <div class="content-container p-8">
+  <div class="h-full p-8">
     <router-outlet></router-outlet>
   </div>
   <so-footer></so-footer>
