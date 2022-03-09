@@ -1,17 +1,17 @@
-<mat-expansion-panel #panel class="so-footer p-fixed" disabled>
+<mat-expansion-panel #panel class="so-footer" disabled>
   <mat-expansion-panel-header>
     <mat-panel-title>
       {{year}}, Softonix. All rights reserved. Reproduction in whole or part without permission is prohibited.
     </mat-panel-title>
     <mat-panel-description>
-      <button class="p-absolute m-0" disableRipple (click)="panel.expanded ? panel.close() : panel.open()" mat-icon-button>
+      <button class="absolute m-0" disableRipple (click)="panel.expanded ? panel.close() : panel.open()" mat-icon-button>
           <img [@rotate]="panel?.expanded" class="caret"  src="assets/img/arrow-caret.png" alt=">"/>
       </button>
     </mat-panel-description>
   </mat-expansion-panel-header>
 
-  <div class="footer-container d-flex space-between">
-    <ul class="d-flex p-0 m-0">
+  <div class="footer-container flex justify-between">
+    <ul class="flex p-0 m-0">
       <li>Terms of Use</li>
       <li class="ml-1">|</li>
       <li class="ml-1">Privacy Policy</li>
@@ -19,7 +19,7 @@
       <li class="ml-1">Customer Care</li>
     </ul>
 
-    <div class="so-logo d-flex align-items-center">
+    <div class="so-logo flex items-center">
       <img src="assets/img/logo-short.png" alt="logo">
       <h1 class="m-0">Softonix</h1>
     </div>

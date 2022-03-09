@@ -12,6 +12,7 @@ $footer-height: pxToRem(24px);
 
 :host {
   z-index: 4;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
