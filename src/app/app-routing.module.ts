@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ROOT_ROUTES } from './shared/models/constants';
-import { HomePageComponent } from './views/home-page/home-page.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 const routes: Routes = [
   {
@@ -11,7 +11,7 @@ const routes: Routes = [
   },
   {
     path: ROOT_ROUTES.login,
-    loadChildren: () => import('./views/login-page/login-page.module').then(
+    loadChildren: () => import('./components/login-page/login-page.module').then(
       (m) => m.LoginPageModule)
   },
   {

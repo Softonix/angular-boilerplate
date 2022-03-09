@@ -15,7 +15,7 @@ import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { AppState } from './store/app.state';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { HomePageModule } from './views/home-page/home-page.module';
+import { HomePageModule } from './components/home-page/home-page.module';
 
 
 @NgModule({

@@ -5,34 +5,6 @@ Also included libraries: NGXS, RXJS, Angular Material.
 Need to notice, that global Softonix frontend guidelines are actual through all projects, and here you can find key differences
 of Angular and VueJS projects.(ex. 'tailwind' is not involved in the current app, but should be).
 
-### Project structure
-
-src                             
-├── app
-│    ├── components                # Global app components, that not involved by router and declared in the app.module
-│           ├──  footer            # services that contain different calculation logic (NOT only API calls)
-│                   ├──  footer.component.html           # component's template
-│                   ├──  footer.component.scss           # component's styles
-│                   ├──  footer.component.spec.ts        # component's unit tests
-│                   └──  footer.component.ts             # component's logic
-│           └──  header 
-│    ├── shared                    # shared instruments
-│           ├──  helpers           # helper functions
-│           ├──  models            # type script objects, interfaces and types
-│           ├──  services          # services that contain different calculation logic (NOT only API calls)
-│           └──  modules           # shared ui components, must be as modules
-│     
-│     ├── store                    # states and actions
-│     └── views                    # whole pages-modules
-│
-├── assets
-│      │── images                     # global images
-│      └── styles                     # base global styles, can include other folders, depend on needs
-|            │── variables            # global variables
-│            └── ng-deep.scss         # global overwritten styles
-│
-└── ...
-
 ### Store-Service relations
 Very important to keep in mind - we use /services/ ... not just for API calls, but also for any logic related to that service data.
 
